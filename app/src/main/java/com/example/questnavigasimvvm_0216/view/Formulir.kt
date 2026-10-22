@@ -3,9 +3,12 @@ package com.example.questnavigasimvvm_0216.view
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
@@ -100,6 +103,17 @@ fun FormIsian(
                 modifier = Modifier.width(250.dp),
                 label = { Text(text = "Alamat") }
             )
+
+            Spacer(modifier = Modifier.height(30.dp))
+
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(all = 25.dp),
+                onClick = onSubmitBtnClick
+            ) {
+                Text(stringResource(id = R.string.submit))
+            }
         }
     }
 }
